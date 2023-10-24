@@ -1,0 +1,70 @@
+// Sample data: List of skill objects
+const skillsData = [
+  {
+    image: "/reactlogo.png",
+    skillName: "React.js",
+    projects: [
+      { name: "Project ORA", url: "projects/ORA" },
+      {
+        name: "Group Buy App - TikTok Challenge",
+        url: "projects/tiktokChallenge",
+      },
+    ],
+  },
+  {
+    image: "/nodejs-icon.svg",
+    skillName: "Node.js",
+    projects: [
+      { name: "Project ORA", url: "projects/ORA" },
+      {
+        name: "Group Buy App - TikTok Challenge",
+        url: "projects/tiktokChallenge",
+      },
+    ],
+  },
+  {
+    image: "/pandas_mark.svg",
+    skillName: "Pandas",
+    projects: [
+      { name: "GFSI", url: "projects/GFSI" },
+      {
+        name: "Sentiment Analysis ML Project",
+        url: "projects/mlSentimentAnalysis",
+      },
+    ],
+  },
+  {
+    image: "/numpy.svg",
+    skillName: "Numpy",
+    projects: [
+      { name: "GFSI", url: "projects/GFSI" },
+      {
+        name: "Sentiment Analysis ML Project",
+        url: "projects/mlSentimentAnalysis",
+      },
+    ],
+  },
+  {
+    image: "/tensorflow-icon.svg",
+    skillName: "TensorFlow",
+    projects: [],
+    elaboration: "sadfads",
+    certification: [
+      {
+        course: "Data Science",
+        url: "education",
+      },
+      {
+        course: "Deep Learning",
+        url: "education",
+      },
+    ],
+  },
+  {
+    image: "/java-icon.svg",
+    skillName: "Java",
+    projects: [{ name: "HungryBees", url: "projects/HungryBees" }],
+  },
+];
+
+export default skillsData;

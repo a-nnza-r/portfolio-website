@@ -1,0 +1,36 @@
+.container {
+  background-color: #f6f6f6;
+  display: grid;
+  padding: 20px;
+  grid-template-rows: 1fr fit-content(100%);
+  grid-template-columns: 1fr;
+}
+
+.profileTextContainer {
+  padding-left: 7%;
+  padding-right: 7%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profileTitle {
+  font-size: 32px;
+  color: #333;
+  font-weight: bold;
+}
+
+.profileSubtitle {
+  font-size: 20px;
+  color: #666;
+}
+
+.profileDetail {
+  font-size: 16px;
+  color: #333;
+}
+
+.profileDetailTitle {
+  font-weight: bold;
+}
