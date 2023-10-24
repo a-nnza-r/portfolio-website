@@ -11,7 +11,7 @@ import {
 import TechIconContainer from "@/components/TechIcon.jsx";
 import { getTechDetailsForProject } from "@/components/ProjectCard.jsx";
 
-export default function ProjectPage(props) {
+export default function ShowcasePage(props) {
   return (
     <Container>
       <Grid container spacing={3}>
