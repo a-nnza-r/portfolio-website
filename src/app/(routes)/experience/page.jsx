@@ -1,5 +1,5 @@
 import CustomTimeline from "@/components/CustomTimeline.jsx";
-import { Alert, Stack, Button } from "@mui/material";
+import { Alert, Stack } from "@mui/material";
 import Link from "next/link";
 
 import experienceData from "@/lib/experience.js";
@@ -19,7 +19,7 @@ export default function Page() {
       <div
         style={{
           width: "100%",
-          height: "75vh",
+          height: "70vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -35,7 +35,7 @@ export default function Page() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: "url(/eduback.jpeg)",
+            backgroundImage: "url(/officebackground.avif)",
             backgroundSize: "cover",
             backgroundPosition: "center center",
             opacity: 0.1, // Adjust this value to control the transparency level
