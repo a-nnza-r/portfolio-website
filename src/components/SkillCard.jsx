@@ -11,7 +11,7 @@ function SkillCard(props) {
   return (
     <Card
       style={{
-        width: "100%",
+        width: "80%",
         display: "flex",
         flexDirection: "row",
         borderRadius: "16px",

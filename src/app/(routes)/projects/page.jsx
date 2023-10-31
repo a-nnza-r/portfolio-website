@@ -37,15 +37,7 @@ export default function Page() {
         }}
       >
         {Object.values(projectDetails).map((project, index) => (
-          <ProjectCard
-            key={index}
-            name={project.name}
-            projectTitleImg={project.projectTitleImg}
-            projectTitleImgAlt={project.projectTitleImgAlt}
-            title={project.title}
-            projectDescription={project.projectDescription}
-            projectTechnologies={project.projectTechnologies}
-          />
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </div>

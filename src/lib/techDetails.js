@@ -35,6 +35,10 @@ const techDetails = {
     name: "Typescript",
     color: "#007acc",
   },
+  Node: {
+    name: "Node",
+    color: "#007acc",
+  },
 };
 
 export default techDetails;

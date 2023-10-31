@@ -1,3 +1,5 @@
+import getTechDetailsForProject from "@/utils/techDetailsHelper.js";
+
 const style = {
   padding: "8px 16px",
   borderRadius: "20px",
@@ -23,7 +25,7 @@ function TechIcon(props) {
 }
 
 export default function TechIconContainer(props) {
-  const { dataList } = props;
+  const techDetails = getTechDetailsForProject(props.dataList);
   return (
     <div
       style={{
@@ -33,7 +35,7 @@ export default function TechIconContainer(props) {
         alignItems: "flex-start",
       }}
     >
-      {dataList.map((data, index) => (
+      {techDetails.map((data, index) => (
         <TechIcon key={index} color={data.color} name={data.name} />
       ))}
     </div>

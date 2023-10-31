@@ -12,14 +12,6 @@ export default function EducationPage() {
   return !project ? (
     <div>No Such Project</div>
   ) : (
-    <ShowcasePage
-      title={project.title}
-      projectDescription={project.projectDescription}
-      projectTechnologies={project.projectTechnologies}
-      projectContribution={project.projectContribution}
-      projectAchievements={project.projectAchievements}
-      projectElaboration={project.projectElaboration}
-      projectLinks={project.projectLinks}
-    />
+    <ShowcasePage data={project} />
   );
 }

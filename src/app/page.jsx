@@ -3,20 +3,35 @@ import PersonalWriteUp from "@/components/PersonalWriteUp";
 
 export default function Page() {
   return (
-    <div>
+    <div
+      style={{
+        borderRadius: "10px",
+      }}
+    >
       <div
         style={{
+          width: "100%",
           display: "flex",
-          alignItems: "center",
+          flexDirection: "column",
           justifyContent: "center",
-          backgroundImage: "url(/backgrounfImg5.jpg)", // Replace with your image path
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          borderRadius: "10px",
-          margin: "5px auto",
+          alignItems: "center",
+          position: "relative",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage: "url(/backGrdImg.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            opacity: 0.6, // Adjust this value to control the transparency level
+            zIndex: -1,
+          }}
+        />
         <Profile />
       </div>
       <PersonalWriteUp />

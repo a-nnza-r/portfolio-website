@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Container,
   Typography,
@@ -8,111 +9,70 @@ import {
   Grid,
 } from "@mui/material";
 
+import BulletList from "@/components/CustomOrderedList.jsx";
 import TechIconContainer from "@/components/TechIcon.jsx";
-import { getTechDetailsForProject } from "@/components/ProjectCard.jsx";
+import ImageComponent from "@/components/ImageComponent.jsx";
+import CustomTypography from "@/components/CustomTypography.jsx";
+import LinksContainer from "@/components/LinksContainer.jsx";
 
-export default function ShowcasePage(props) {
+const components = {
+  TechIconContainer: TechIconContainer,
+  CustomTypography: CustomTypography,
+  CustomList: BulletList,
+  LinksContainer: LinksContainer,
+};
+
+export default function ShowcasePage2(props) {
   return (
-    <Container>
-      <Grid container spacing={3}>
-        <Grid item xs={3}>
-          <Typography variant="h4">Table of Contents</Typography>
-          <List>
-            {props.projectElaboration && (
-              <ListItem button component="a" href="#projectElaboration">
-                <ListItemText primary="Project Description" />
-              </ListItem>
-            )}
-            {props.projectTechnologies &&
-              props.projectTechnologies.length > 0 && (
-                <ListItem button component="a" href="#technologies">
-                  <ListItemText primary="Technologies Used" />
-                </ListItem>
-              )}
-            {props.projectContribution &&
-              props.projectContribution.length > 0 && (
-                <ListItem button component="a" href="#contribution">
-                  <ListItemText primary="Contributions" />
-                </ListItem>
-              )}
-            {props.projectAchievements &&
-              props.projectAchievements.length > 0 && (
-                <ListItem button component="a" href="#achievements">
-                  <ListItemText primary="Achievements" />
-                </ListItem>
-              )}
-            {props.projectLinks && props.projectLinks.length > 0 && (
-              <ListItem button component="a" href="#links">
-                <ListItemText primary="Links" />
-              </ListItem>
-            )}
-          </List>
-        </Grid>
-
-        {/* Main Content */}
-        <Grid item xs={9}>
-          <Box mt={4}>
-            <Typography variant="h2" id="projectElaboration">
-              {props.title}
-            </Typography>
-            {props.projectElaboration && (
-              <Box mt={4}>
-                <Typography variant="h5">Project Description</Typography>
-                <Typography variant="body1">
-                  {props.projectElaboration}
-                </Typography>
-              </Box>
-            )}
-          </Box>
-          {props.projectTechnologies &&
-            props.projectTechnologies.length > 0 && (
-              <Box mt={6} id="technologies">
-                <Typography variant="h5">Technologies Used</Typography>
-                <TechIconContainer
-                  dataList={getTechDetailsForProject(props.projectTechnologies)}
-                />
-              </Box>
-            )}
-          {props.projectContribution &&
-            props.projectContribution.length > 0 && (
-              <Box mt={6} id="contribution">
-                <Typography variant="h5">Contributions</Typography>
-                <List>
-                  {props.projectContribution.map((contribution, index) => (
-                    <ListItem key={index}>
-                      <ListItemText primary={contribution} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            )}
-          {props.projectAchievements &&
-            props.projectAchievements.length > 0 && (
-              <Box mt={6} id="achievements">
-                <Typography variant="h5">Achievements</Typography>
-                <List>
-                  {props.projectAchievements.map((achievement, index) => (
-                    <ListItem key={index}>
-                      <ListItemText primary={achievement} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            )}
-          {props.projectLinks && props.projectLinks.length > 0 && (
-            <Box mt={6} id="links">
-              <Typography variant="h5">Links</Typography>
+    <div style={{ margin: "10px" }}>
+      <Container>
+        <ImageComponent
+          src={props.data.TitleImg.src}
+          alt={props.data.TitleImg.alt}
+        />
+        <Typography variant="h2" align="center">
+          {props.data.title}
+        </Typography>
+        <Grid container spacing={3}>
+          {/* Table of Contents */}
+          <Grid item xs={3}>
+            <Box style={{ position: "sticky", top: "10px" }}>
+              <Typography variant="h5">Table of Contents</Typography>
               <List>
-                {props.projectLinks.map((link, index) => (
-                  <ListItem key={index} component="a" href={link.url}>
-                    <ListItemText primary={link.label} />
-                  </ListItem>
-                ))}
+                {Object.entries(props.data.sections).map(
+                  ([key, section], index) => (
+                    <ListItem key={index} button component="a" href={`#${key}`}>
+                      <ListItemText primary={section.title} />
+                    </ListItem>
+                  )
+                )}
               </List>
             </Box>
-          )}
+          </Grid>
+
+          {/* Main Content */}
+          <Grid item xs={9}>
+            {Object.entries(props.data.sections).map(
+              ([key, section], index) => (
+                <Box mt={4} key={index} id={key}>
+                  {section.key !== "TitleImg" && (
+                    <Typography variant="h4">{section.title}</Typography>
+                  )}
+                  {components[section.displayComponent] ? (
+                    React.createElement(components[section.displayComponent], {
+                      dataList: section.data,
+                    })
+                  ) : (
+                    <Typography variant="body1">
+                      Component not found.
+                    </Typography>
+                  )}
+                </Box>
+              )
+            )}
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </div>
   );
 }

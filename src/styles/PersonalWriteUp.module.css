@@ -1,8 +1,6 @@
 .container {
   background-color: #f6f6f6; /* This is a grayish color similar to the background in the image */
   padding: 40px; /* Giving some padding to match the layout */
-  margin: 5px auto; /* Center the container */
-  border-radius: 10px; /* Giving some rounded edges to the container */
   display: flex;
   flex-direction: column;
   align-items: center;

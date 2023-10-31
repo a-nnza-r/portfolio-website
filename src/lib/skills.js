@@ -48,15 +48,15 @@ const skillsData = [
     image: "/tensorflow-icon.svg",
     skillName: "TensorFlow",
     projects: [],
-    elaboration: "sadfads",
+    elaboration: "Relevant courses: ",
     certification: [
       {
-        course: "Data Science",
-        url: "education",
+        name: "Deep Learning",
+        url: "education/deepLearning",
       },
       {
-        course: "Deep Learning",
-        url: "education",
+        name: "Data Science",
+        url: "education/dataScience",
       },
     ],
   },
