@@ -19,7 +19,6 @@ export default function Page() {
       <div
         style={{
           width: "100%",
-          height: "70vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
