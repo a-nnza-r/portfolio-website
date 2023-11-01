@@ -9,9 +9,13 @@ theme = responsiveFontSizes(theme);
 
 export default function RootLayout({ children }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Header />
-      {children}
-    </ThemeProvider>
+    <html lang="en">
+      <body>
+        <ThemeProvider theme={theme}>
+          <Header />
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
