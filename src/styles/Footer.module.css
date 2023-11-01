@@ -17,14 +17,6 @@
   margin: 1vh 0vh;
 }
 
-@media (max-width: 768px) {
-  .profileTextContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
 .profileTitle {
   font-size: 32px;
   color: #333;
@@ -43,4 +35,16 @@
 
 .profileDetailTitle {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .profileTextContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profileTextContainer > * {
+    text-align: center;
+  }
 }
