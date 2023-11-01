@@ -1,4 +1,4 @@
-import { Container, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import SkillCard from "@/components/SkillCard.jsx";
 import skillsData from "@/lib/skills.js";
 
@@ -29,28 +29,26 @@ export default function Page() {
           zIndex: -1,
         }}
       />
-      <div style={{ margin: "30px 0 30px 0" }}>
-        <Container>
-          <Box
-            display="flex"
-            flexDirection="row"
-            flexWrap="wrap"
-            justifyContent="center"
-            gap={2}
-          >
-            {skillsData.map((skill, index) => (
-              <SkillCard
-                key={index}
-                image={skill.image}
-                skillName={skill.skillName}
-                projects={skill.projects}
-                certification={skill.certification}
-                elaboration={skill.elaboration}
-              />
-            ))}
-          </Box>
-        </Container>
-      </div>
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap={2}
+        style={{
+          margin: "3vh 1vw",
+          width: "80%",
+        }}
+      >
+        {skillsData.map((skill, index) => (
+          <SkillCard
+            key={index}
+            image={skill.image}
+            skillName={skill.skillName}
+            projects={skill.projects}
+            certification={skill.certification}
+            elaboration={skill.elaboration}
+          />
+        ))}
+      </Box>
     </div>
   );
 }

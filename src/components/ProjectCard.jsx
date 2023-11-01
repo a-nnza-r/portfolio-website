@@ -18,11 +18,17 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, border: "5px", margin: "10px" }}>
+    <Card
+      sx={{
+        minWidth: { xs: "80%", s: "50%", md: "35%", lg: "30%" },
+        maxWidth: { xs: "100%", s: "80%", md: "45%", lg: "30%" },
+        margin: "2vh 1vw",
+      }}
+    >
       <CardActionArea onClick={handleCardClick}>
         <CardMedia
           component="img"
-          height="140"
+          height="140vh"
           image={project.TitleImg.src}
           alt={project.TitleImg.alt}
         />
@@ -33,7 +39,7 @@ export default function ProjectCard(props) {
           <Typography
             variant="body2"
             color="text.secondary"
-            paddingBottom={"10px"}
+            paddingBottom={"0.2vh"}
           >
             {project.sections.projectOverview.data.text}
           </Typography>

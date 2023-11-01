@@ -33,7 +33,7 @@ export default function Page() {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-between", // Updated this line
-          margin: "30px 15vh 30px 15vh",
+          margin: "5vh 10vw 5vh 10vw",
         }}
       >
         {Object.values(projectDetails).map((project, index) => (
