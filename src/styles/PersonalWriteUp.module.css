@@ -22,6 +22,10 @@
 
 /* Media query for devices with a max width of 768px (e.g., tablets) */
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 3vh 3vw; /* Giving some padding to match the layout */
+  }
+
   .PersonalWriteUph1 {
     font-size: 28px;
   }
@@ -32,6 +36,10 @@
 
 /* Media query for devices with a max width of 480px (e.g., mobile phones) */
 @media only screen and (max-width: 480px) {
+  .container {
+    padding: 1vh 1vw; /* Giving some padding to match the layout */
+  }
+
   .PersonalWriteUph1 {
     font-size: 24px;
   }
