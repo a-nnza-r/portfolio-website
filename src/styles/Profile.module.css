@@ -1,34 +1,45 @@
 /* styles/Profile.module.css */
 
-.gridLayout {
-  display: grid;
-  grid-template-columns: fit-content(100%) fit-content(100%);
-  grid-template-rows: auto min-content;
-  grid-row-gap: 10px;
-  margin: 20px;
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin: 2vh 2vw;
 }
 
-.gridLayout > * {
+.ImgandTextConatiner {
   background-color: #f6f6f6;
-}
-
-.ImgContainer {
-  background-color: #00b9ff;
-  order: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 .profileImg {
+  max-width: 50%;
   height: auto;
   display: block;
   margin: auto;
 }
 
 .profileTextContainer {
+  flex-grow: 1;
+  flex-shrink: 0;
   order: 2;
-  padding: 60px;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsContainer {
+  flex-grow: 1;
+  flex-shrink: 1;
+  order: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.detailsContainer > * {
+  margin: 1% 0px 0px 0px;
 }
 
 .profileTitle {
@@ -40,13 +51,12 @@
 .profileSubtitle {
   font-size: 20px;
   color: #666;
-  margin-bottom: 40px;
+  margin-bottom: 8vh;
 }
 
 .profileDetail {
   font-size: 16px;
   color: #333;
-  padding-bottom: 20px;
 }
 
 .profileDetailTitle {
@@ -54,7 +64,55 @@
 }
 
 .socialsContainer {
-  order: 3;
-  grid-column: 1 / 3;
   justify-content: center;
+}
+
+/* Media query for devices with a max width of 768px (e.g., tablets) */
+@media only screen and (max-width: 768px) {
+  .profileTitle {
+    font-size: 28px;
+  }
+
+  .profileSubtitle {
+    font-size: 18px;
+    margin-bottom: 3vh;
+  }
+
+  .profileDetail {
+    font-size: 14px;
+  }
+}
+
+/* Media query for devices with a max width of 480px (e.g., mobile phones) */
+@media only screen and (max-width: 480px) {
+  .ImgandTextConatiner {
+    flex-direction: column;
+  }
+
+  .profileTextContainer {
+    align-items: center;
+  }
+
+  .profileImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .detailsContainer > * {
+    margin: 5% 0px 0px 0px;
+  }
+
+  .profileTitle {
+    text-align: center;
+  }
+
+  .profileSubtitle {
+    text-align: center;
+  }
+
+  .profileDetail {
+    text-align: center;
+  }
 }

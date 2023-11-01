@@ -1,6 +1,6 @@
 .container {
   background-color: #f6f6f6; /* This is a grayish color similar to the background in the image */
-  padding: 40px; /* Giving some padding to match the layout */
+  padding: 5vh 5vw; /* Giving some padding to match the layout */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
 
 .PersonalWriteUph1 {
   font-size: 32px; /* Estimated size */
-  margin-bottom: 20px; /* Some spacing between title and paragraph */
+  margin-bottom: 0.2vh; /* Some spacing between title and paragraph */
   color: #333; /* A dark color for text */
   text-align: center;
 }
@@ -18,4 +18,24 @@
   font-size: 16px; /* Estimated size */
   color: #666; /* A slightly lighter color for text */
   text-align: center;
+}
+
+/* Media query for devices with a max width of 768px (e.g., tablets) */
+@media only screen and (max-width: 768px) {
+  .PersonalWriteUph1 {
+    font-size: 28px;
+  }
+  .PersonalWriteUpp {
+    font-size: 14px;
+  }
+}
+
+/* Media query for devices with a max width of 480px (e.g., mobile phones) */
+@media only screen and (max-width: 480px) {
+  .PersonalWriteUph1 {
+    font-size: 24px;
+  }
+  .PersonalWriteUpp {
+    font-size: 12px;
+  }
 }
