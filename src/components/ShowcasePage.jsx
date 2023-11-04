@@ -1,7 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
 import {
-  Container,
   Typography,
   List,
   ListItem,
@@ -28,21 +28,31 @@ const components = {
   LinksContainer: LinksContainer,
 };
 
-export default function ShowcasePage2(props) {
+export default function ShowcasePage(props) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Container>
-      <Box textAlign="center" my={2}>
+    <div>
+      <div
+        style={{
+          width: "92%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          margin: "0 4% 0 4%",
+        }}
+      >
         <ImageComponent
           src={props.data.TitleImg.src}
           alt={props.data.TitleImg.alt}
         />
-        <Typography variant="h2">{props.data.title}</Typography>
-      </Box>
+        <Typography variant="h2" textAlign="center">
+          {props.data.title}
+        </Typography>
+      </div>
+
       <Grid container spacing={3}>
-        {/* Conditionally render the Table of Contents depending on the screen size */}
         {<TableOfContents sections={props.data.sections} isMobile={isMobile} />}
 
         {/* Main Content */}
@@ -63,7 +73,7 @@ export default function ShowcasePage2(props) {
           ))}
         </Grid>
       </Grid>
-    </Container>
+    </div>
   );
 }
 
