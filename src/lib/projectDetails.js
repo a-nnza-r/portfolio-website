@@ -123,23 +123,41 @@ const projectDetails2 = {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "...",
+          text: "ThriftTogether is a project aimed at simplifying the process of initiating group orders for food inspired by late-night TikTok videos. The motivation behind this project is to eliminate the cumbersome process of coordinating orders, calculating shared costs, and dealing with multiple payment methods when sharing a meal with friends after discovering an enticing dish on TikTok.",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
-        data: ["...", "..."],
+        data: [
+          "Simplified Group Ordering: ThriftTogether enables users to quickly and easily initiate group food orders directly from TikTok videos.",
+          "Seamless Sharing: Users can share their food preferences with friends by generating a QR code or sharing a direct link, making it effortless to organize a group order.",
+          "Location-Based Clustering: The platform automatically groups users based on their location to ensure that everyone in the group receives their food while it's still hot and fresh.",
+          "Automated Calculations: ThriftTogether eliminates the need for manual calculations of shared costs, simplifying the financial aspect of group orders.",
+          "Single Payment Solution: Users no longer need to deal with separate payments; ThriftTogether handles all transactions, providing a streamlined and convenient payment process.",
+        ],
       },
       projectContribution: {
         title: "Project Contribution",
         displayComponent: "CustomList",
-        data: ["sdfsd", "dfasfs", "afdf"],
+        data: [
+          "Designed RESTful APIs, allowing ThriftTogether to be easily integrated as a microservice into other platforms or e-commerce systems.",
+        ],
       },
       projectLinks: {
         title: "Project Links",
         displayComponent: "LinksContainer",
         data: [
+          {
+            link: "https://devpost.com/software/thrifttogether-groupbuy-with-friends-on-tiktok-shop",
+            image: "",
+            text: "DEVPOST Link",
+          },
+          {
+            link: "https://www.youtube.com/watch?v=tp59MqQrKNA",
+            image: "",
+            text: "Youtube Video for thte project Description",
+          },
           {
             link: "https://github.com/Nextify-Lab/tiktok-hackathon-2023",
             image: "/tiktok-hackathon-2023.png",
@@ -150,7 +168,7 @@ const projectDetails2 = {
       projectTechnologies: {
         title: "Technologies used",
         displayComponent: "TechIconContainer",
-        data: ["Next.js", "React.js", "Typescript"],
+        data: ["Next.js", "Typescript", "firebase"],
       },
     },
   },

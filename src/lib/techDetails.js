@@ -39,6 +39,10 @@ const techDetails = {
     name: "Node",
     color: "#007acc",
   },
+  firebase: {
+    name: "Firebase",
+    color: "#FFA611",
+  },
 };
 
 export default techDetails;

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   Container,
   Typography,
@@ -7,7 +8,12 @@ import {
   ListItemText,
   Box,
   Grid,
+  IconButton,
+  useTheme,
+  Drawer,
+  useMediaQuery,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import BulletList from "@/components/CustomOrderedList.jsx";
 import TechIconContainer from "@/components/TechIcon.jsx";
@@ -23,6 +29,9 @@ const components = {
 };
 
 export default function ShowcasePage2(props) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <div style={{ margin: "10px" }}>
       <Container>
@@ -34,24 +43,16 @@ export default function ShowcasePage2(props) {
           {props.data.title}
         </Typography>
         <Grid container spacing={3}>
-          {/* Table of Contents */}
-          <Grid item xs={3}>
-            <Box style={{ position: "sticky", top: "10px" }}>
-              <Typography variant="h5">Table of Contents</Typography>
-              <List>
-                {Object.entries(props.data.sections).map(
-                  ([key, section], index) => (
-                    <ListItem key={index} button component="a" href={`#${key}`}>
-                      <ListItemText primary={section.title} />
-                    </ListItem>
-                  )
-                )}
-              </List>
-            </Box>
-          </Grid>
+          {/* Conditionally render the Table of Contents depending on the screen size */}
+          {
+            <TableOfContents
+              sections={props.data.sections}
+              isMobile={isMobile}
+            />
+          }
 
           {/* Main Content */}
-          <Grid item xs={9}>
+          <Grid item xs={12} sm={9}>
             {Object.entries(props.data.sections).map(
               ([key, section], index) => (
                 <Box mt={4} key={index} id={key}>
@@ -74,5 +75,70 @@ export default function ShowcasePage2(props) {
         </Grid>
       </Container>
     </div>
+  );
+}
+
+function TableOfContents(props) {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setIsDrawerOpen(open);
+  };
+
+  const drawerContents = (
+    <List>
+      {Object.entries(props.sections).map(([key, section], index) => (
+        <ListItem key={index} button component="a" href={`#${key}`}>
+          <ListItemText primary={section.title} />
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  return (
+    <>
+      {props.isMobile ? (
+        <>
+          <IconButton
+            onClick={toggleDrawer(true)}
+            sx={{
+              position: "fixed",
+              bottom: (theme) => theme.spacing(1),
+              right: (theme) => theme.spacing(0),
+              zIndex: (theme) => theme.zIndex.drawer + 1,
+            }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Drawer
+            anchor="right"
+            open={isDrawerOpen}
+            onClose={toggleDrawer(false)}
+          >
+            {drawerContents}
+          </Drawer>
+        </>
+      ) : (
+        <Grid item xs={3}>
+          <Box style={{ position: "sticky", top: "10px" }}>
+            <Typography variant="h5">Table of Contents</Typography>
+            <List>
+              {Object.entries(props.sections).map(([key, section], index) => (
+                <ListItem key={index} button component="a" href={`#${key}`}>
+                  <ListItemText primary={section.title} />
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Grid>
+      )}
+    </>
   );
 }
