@@ -33,7 +33,15 @@ export default function ShowcasePage(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div>
+    <div
+      style={{
+        width: "95%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: "1% 2.5% 1% 2.5%",
+      }}
+    >
       <div
         style={{
           width: "92%",
