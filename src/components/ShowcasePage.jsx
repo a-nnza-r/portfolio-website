@@ -33,48 +33,37 @@ export default function ShowcasePage2(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div style={{ margin: "10px" }}>
-      <Container>
+    <Container>
+      <Box textAlign="center" my={2}>
         <ImageComponent
           src={props.data.TitleImg.src}
           alt={props.data.TitleImg.alt}
         />
-        <Typography variant="h2" align="center">
-          {props.data.title}
-        </Typography>
-        <Grid container spacing={3}>
-          {/* Conditionally render the Table of Contents depending on the screen size */}
-          {
-            <TableOfContents
-              sections={props.data.sections}
-              isMobile={isMobile}
-            />
-          }
+        <Typography variant="h2">{props.data.title}</Typography>
+      </Box>
+      <Grid container spacing={3}>
+        {/* Conditionally render the Table of Contents depending on the screen size */}
+        {<TableOfContents sections={props.data.sections} isMobile={isMobile} />}
 
-          {/* Main Content */}
-          <Grid item xs={12} sm={9}>
-            {Object.entries(props.data.sections).map(
-              ([key, section], index) => (
-                <Box mt={4} key={index} id={key}>
-                  {section.key !== "TitleImg" && (
-                    <Typography variant="h4">{section.title}</Typography>
-                  )}
-                  {components[section.displayComponent] ? (
-                    React.createElement(components[section.displayComponent], {
-                      dataList: section.data,
-                    })
-                  ) : (
-                    <Typography variant="body1">
-                      Component not found.
-                    </Typography>
-                  )}
-                </Box>
-              )
-            )}
-          </Grid>
+        {/* Main Content */}
+        <Grid item xs={12} sm={9}>
+          {Object.entries(props.data.sections).map(([key, section], index) => (
+            <Box mt={4} key={index} id={key}>
+              {section.key !== "TitleImg" && (
+                <Typography variant="h4">{section.title}</Typography>
+              )}
+              {components[section.displayComponent] ? (
+                React.createElement(components[section.displayComponent], {
+                  dataList: section.data,
+                })
+              ) : (
+                <Typography variant="body1">Component not found.</Typography>
+              )}
+            </Box>
+          ))}
         </Grid>
-      </Container>
-    </div>
+      </Grid>
+    </Container>
   );
 }
 
