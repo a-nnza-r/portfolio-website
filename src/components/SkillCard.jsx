@@ -26,6 +26,9 @@ function SkillCard(props) {
           m: 1,
           flex: {
             xs: 5,
+            sm: 4,
+            md: 3,
+            lg: 2,
           }, // Adjusts flex behavior for smaller screens
           display: "flex",
         }}
@@ -43,7 +46,16 @@ function SkillCard(props) {
         />
       </Box>
 
-      <CardContent sx={{ flex: 10 }}>
+      <CardContent
+        sx={{
+          flex: {
+            xs: 7,
+            sm: 8,
+            md: 9,
+            lg: 10,
+          },
+        }}
+      >
         <Typography
           variant="h5"
           component="div"
