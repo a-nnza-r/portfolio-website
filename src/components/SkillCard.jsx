@@ -25,7 +25,7 @@ function SkillCard(props) {
           borderBottomLeftRadius: "16px",
           m: 1,
           flex: {
-            xs: 4,
+            xs: 5,
             sm: 2,
           }, // Adjusts flex behavior for smaller screens
           display: "flex",
