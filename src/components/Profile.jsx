@@ -7,7 +7,7 @@ function Profile() {
     <div className={styles.profileContainer}>
       <div className={styles.ImgandTextConatiner}>
         <img
-          src="/me.jpeg"
+          src="me.png"
           alt={information.name}
           className={styles.profileImg}
         />
