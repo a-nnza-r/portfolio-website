@@ -26,7 +26,6 @@ function SkillCard(props) {
           m: 1,
           flex: {
             xs: 5,
-            sm: 2,
           }, // Adjusts flex behavior for smaller screens
           display: "flex",
         }}
