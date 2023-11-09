@@ -1,35 +1,35 @@
 const projectDetails2 = {
   mlSentimentAnalysis: {
     name: "mlSentimentAnalysis",
-    title: "Sentiment Analysis ML Project",
+    title: "Sentiment Analysis Machine Learning Project",
     TitleImg: {
       src: "/Sentiment-analysis.png",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "This is a group project built under the Machine Learning (50.007) module in SUTD. The project works on developing automated systems for analyzing sentiment information associated with social media data.",
+          text: "This group project was developed under the Machine Learning (50.007) module at SUTD. The project focuses on creating automated systems for analyzing sentiment information associated with social media data.",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
         data: [
-          "In this design project, we to design a sequence labelling model for informal texts using the hidden Markov model (HMM).",
-          "Overall, our goal was to build a sequence labelling system from a training data set and then use the system to predict tag sequences for new sentences.",
+          "In this design project, we designed a sequence labeling model for informal texts using the hidden Markov model (HMM).",
+          "Our goal was to build a sequence labeling system from a training dataset and use the system to predict tag sequences for new sentences.",
         ],
       },
       projectContribution: {
         title: "Project Contribution",
         displayComponent: "CustomList",
         data: [
-          "Function that estimates the emission parameters from the training set using MLE (maximum likelihood estimation)",
-          "Implement a simple sentiment analysis system using emission probabilities.",
-          "Perform sentiment analysis using the viterbi alorthim.",
-          "Design and implement a modified viterbi algorithm to extract k-best sequences of output sentiment.",
+          "Implemented a function for estimating emission parameters from the training set using MLE (maximum likelihood estimation).",
+          "Designed and implemented a simple sentiment analysis system using emission probabilities.",
+          "Performed sentiment analysis using the Viterbi algorithm.",
+          "Designed and implemented a modified Viterbi algorithm to extract k-best sequences of output sentiment.",
         ],
       },
       projectLinks: {
@@ -39,14 +39,14 @@ const projectDetails2 = {
           {
             link: "https://github.com/a-nnza-r/ML-proj.git",
             image: "/ML-proj.png",
-            text: "Github repository",
+            text: "GitHub Repository",
           },
         ],
       },
       projectTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Python", "Numpy", "Pandas"],
+        data: ["Python", "NumPy", "Pandas"],
       },
     },
   },
@@ -55,32 +55,32 @@ const projectDetails2 = {
     title: "Project ORA",
     TitleImg: {
       src: "/img1.png",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "This is a group project built under the Elements of Software Construction (50.003) module in SUTD. The project achieved the objective of creating a web application that consolidates all event proposal forms for respective fifth-rows that allows for easy management and communication.",
+          text: "This group project was developed under the Elements of Software Construction (50.003) module at SUTD. The project successfully created a web application that centralizes event proposal forms for respective fifth-rows, allowing for easy management and communication.",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
         data: [
-          "OSL-Fifth Row App is a web application that aims to improve the event proposal form submission and management process for OSL, Fifth-Row EXCOs and ROOT users.",
+          "OSL-Fifth Row App is a web application designed to improve the event proposal form submission and management process for OSL, Fifth-Row EXCOs, and ROOT users.",
         ],
       },
       projectContribution: {
         title: "Project Contribution",
         displayComponent: "CustomList",
         data: [
-          "Backend Developer and Tester",
-          "Incorporating an account-based (2 account types, at the start) solution so that we can enable the different types of users to have different privileges.",
-          "Incorporating form validation to ensure to alleviate the issue of needing a lot of back-and-forth between OSL and EXCOs.",
-          "I collaborated in planning the interaction sequences between the client, backend, and database components of the application.",
-          " I ensured that error-handling strategies were integrated into the design, enhancing the application's robustness. Some of the error handling was implemented as per the solutions gathered from the (mis) use-case diagrams. ",
+          "Contributed as a backend developer and tester.",
+          "Incorporated an account-based solution to enable different types of users to have different privileges.",
+          "Incorporated form validation to alleviate the need for excessive back-and-forth between OSL and EXCOs.",
+          "Collaborated in planning interaction sequences between the client, backend, and database components of the application.",
+          "Ensured the integration of error-handling strategies to enhance the application's robustness.",
         ],
       },
       projectLinks: {
@@ -90,24 +90,24 @@ const projectDetails2 = {
           {
             link: "https://drive.google.com/file/d/1sQpJY8KudrkNaZZT0YPnvjGOF1c7M81x/view?usp=sharing",
             image: "",
-            text: "App demo video",
+            text: "App Demo Video",
           },
           {
             link: "https://github.com/a-nnza-r/ESC_backend",
             image: "/ESC_backend.png",
-            text: "Backend Git Repository for project ORA",
+            text: "Backend Git Repository for Project ORA",
           },
           {
             link: "https://github.com/esctmp/osl-fifth-row-app",
             image: "/osl-fifth-row-app-frontend.png",
-            text: "Frontend Git Repository for project ORA",
+            text: "Frontend Git Repository for Project ORA",
           },
         ],
       },
       projectTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Node.js", "React.js"],
+        data: ["React.js", "Node.js", "PostgreSQL"],
       },
     },
   },
@@ -116,14 +116,14 @@ const projectDetails2 = {
     title: "Group Buy App - TikTok Challenge",
     TitleImg: {
       src: "/TikTokChallenge.jpeg",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "ThriftTogether is a project aimed at simplifying the process of initiating group orders for food inspired by late-night TikTok videos. The motivation behind this project is to eliminate the cumbersome process of coordinating orders, calculating shared costs, and dealing with multiple payment methods when sharing a meal with friends after discovering an enticing dish on TikTok.",
+          text: "ThriftTogether is a project aimed at simplifying the process of initiating group orders for food, inspired by late-night TikTok videos. The motivation behind this project is to eliminate the cumbersome process of coordinating orders, calculating shared costs, and dealing with multiple payment methods when sharing a meal with friends after discovering an enticing dish on TikTok.",
         },
       },
       projectDescription: {
@@ -151,58 +151,58 @@ const projectDetails2 = {
           {
             link: "https://devpost.com/software/thrifttogether-groupbuy-with-friends-on-tiktok-shop",
             image: "",
-            text: "DEVPOST Link",
+            text: "Devpost Link",
           },
           {
             link: "https://www.youtube.com/watch?v=tp59MqQrKNA",
             image: "",
-            text: "Youtube Video for thte project Description",
+            text: "YouTube Video for Project Description",
           },
           {
             link: "https://github.com/Nextify-Lab/tiktok-hackathon-2023",
             image: "/tiktok-hackathon-2023.png",
-            text: "Git Repository",
+            text: "GitHub Repository",
           },
         ],
       },
       projectTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Next.js", "Typescript", "firebase"],
+        data: ["Next.js", "Typescript", "Firebase"],
       },
     },
   },
   HungryBees: {
     name: "HungryBees",
-    title: "HungryBees - Food delivery Sharing App",
+    title: "HungryBees - Food Delivery Sharing App",
     TitleImg: {
       src: "/hungryBeesTitle.png",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "This is a group project built under the Information Systems & Programming (50.001) module in SUTD. HungryBees is a simple app that enables users to easily forms grups or join group orders online at anytime, enabling them to share the expenses of food deliveries.",
+          text: "This group project was developed under the Information Systems & Programming (50.001) module at SUTD. HungryBees is a simple app that enables users to easily form groups or join group orders online at any time, allowing them to share the expenses of food deliveries.",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
         data: [
-          "Andriod Application built using java",
-          "Incroperated various features suchas login page for , proximity-based browsing and listing fucnationality.",
-          "Incroperated filtered browsing for user centric experince",
-          "Chatrooms for groupBuyeres to communicate about their order deatils",
+          "Android Application built using Java.",
+          "Incorporated various features such as a login page, proximity-based browsing, and listing functionality.",
+          "Incorporated filtered browsing for a user-centric experience.",
+          "Chatrooms for group buyers to communicate about their order details.",
         ],
       },
       projectContribution: {
         title: "Project Contribution",
         displayComponent: "CustomList",
         data: [
-          "Developed responsive Android UI for simplifying group food orders by integrating Google Firebase and Java.",
-          "Utilized Android Developer API to retrieve device location and identify close-proximity group food orders.­­­",
+          "Developed responsive Android UI to simplify group food orders by integrating Google Firebase and Java.",
+          "Utilized Android Developer API to retrieve device location and identify close-proximity group food orders.",
           "Led the system design process, including selecting the appropriate tech stack, defining key data models, and determining data flow architecture to optimize app performance and user experience.",
         ],
       },
@@ -224,14 +224,14 @@ const projectDetails2 = {
           {
             link: "https://github.com/NathanAW24/food-sharing-app",
             image: "/hungryBeesGithub.png",
-            text: "Github Repository Link",
+            text: "GitHub Repository Link",
           },
         ],
       },
       projectTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["java", "andriod"],
+        data: ["Java", "Android"],
       },
     },
   },
@@ -240,31 +240,31 @@ const projectDetails2 = {
     title: "Global Food Security Index Predictive Analysis",
     TitleImg: {
       src: "/GFSITitle.jpeg",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "This is a group project built under the Data Driven World (10.020) module in SUTD with the following design task 'Create a model to predict a country’s Global Food Security Index (GFSI) by entering a country’s features, thus allowing UN Security Council members to weigh the importance of assisting this country.' ",
+          text: "This group project was developed under the Data Driven World (10.020) module at SUTD with the following design task: 'Create a model to predict a country’s Global Food Security Index (GFSI) by entering a country’s features, thus allowing UN Security Council members to weigh the importance of assisting this country.'",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
         data: [
-          "We applied data transformations as well as other data cleaning techniques to build an appropriate Linear Regression model, to predict GSFI based on certain features.",
+          "We applied data transformations and other data cleaning techniques to build an appropriate Linear Regression model to predict GFSI based on certain features.",
         ],
       },
       projectContribution: {
         title: "Project Contribution",
         displayComponent: "CustomList",
         data: [
-          "Data preporcessing: such as removing outliers , data transformation and scaling.",
-          "Implementing a Regression model from scratch (without the use of ML packages such as scikit learn).",
-          "Train and validate model, perform fine tuning to improve model robustness.",
-          "Test model results.",
+          "Data preprocessing, such as removing outliers, data transformation, and scaling.",
+          "Implemented a Regression model from scratch (without the use of ML packages such as scikit-learn).",
+          "Trained and validated the model, performed fine-tuning to improve model robustness.",
+          "Tested model results.",
         ],
       },
       projectLinks: {
@@ -274,7 +274,7 @@ const projectDetails2 = {
           {
             link: "https://github.com/NathanAW24/food-security",
             image: "/GFSI-modelRepo.png",
-            text: "Regression model Repository",
+            text: "Regression Model Repository",
           },
           {
             link: "https://github.com/NathanAW24/food-security-website",
@@ -284,40 +284,40 @@ const projectDetails2 = {
         ],
       },
       projectTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
         data: [
           "Python",
-          "Numpy",
+          "NumPy",
           "Pandas",
-          "Mathplotlib",
+          "Matplotlib",
           "Next.js",
           "React.js",
-          "Typescript",
+          "TypeScript",
         ],
       },
     },
   },
   designThinkingProject: {
     name: "designThinkingProject",
-    title: "Project LIT-TREE-LY ",
+    title: "Project LIT-TREE-LY",
     TitleImg: {
       src: "/DTItitle.jpeg",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       projectOverview: {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "Fully-functional all-weather shelter that brings people together through an immersive and integrative audio and visual experience. Office workers are able to collaboratively build memorable interactions that stimulates the senses of touch, hearing and sight and promotes a healthy work-life balance in a lively and liberating manner. This is a group project built under the Design Thinking and Inovation (3.007) module in SUTD.",
+          text: "A fully-functional all-weather shelter that brings people together through an immersive and integrative audio and visual experience. Office workers can collaboratively create memorable interactions that stimulate the senses of touch, hearing, and sight, promoting a healthy work-life balance in a lively and liberating manner. This is a group project developed under the Design Thinking and Innovation (3.007) module at SUTD (Singapore University of Technology and Design).",
         },
       },
       projectDescription: {
         title: "Project Description",
         displayComponent: "CustomList",
         data: [
-          "In today’s ever-increasing sedentary lifestyle, it is only crucial we achieve a proper and healthy balance amidst the buzz of the daily pursuit of economic successes. This is prevalent in Singapore, an advanced and fast-paced society, where most individuals dedicate long hours to working. According to a Cigna 360 well-being survey, conducted in 2019, a stunning 92 percent of working Singaporeans are stressed. This is 8 percent higher than the global average. According to numerous studies, Singaporean’s stress is primarily manifested in the workplace. Since Changi Business Park is highly populated by corporate headquarters, it is only fair that the environment uplifts workers’ spirits in order to ensure sustainable working lifestyles. Hence, project LIVELY BALANCE targets to achieve the overarching aim of promoting a healthy work-life balance.",
+          "In today’s increasingly sedentary lifestyle, it is crucial to achieve a proper and healthy balance amid the hustle of daily economic pursuits. This is especially prevalent in Singapore, an advanced and fast-paced society, where many individuals dedicate long hours to work. According to a 2019 Cigna 360 well-being survey, a remarkable 92 percent of working Singaporeans experience stress, which is 8 percent higher than the global average. Numerous studies suggest that Singaporeans' stress is primarily manifested in the workplace. Since Changi Business Park is highly populated by corporate headquarters, it is important that the environment uplifts workers' spirits to ensure sustainable working lifestyles. Hence, Project LIT-TREE-LY aims to promote a healthy work-life balance.",
         ],
       },
       projectAchievements: {
@@ -337,7 +337,7 @@ const projectDetails2 = {
         data: [
           {
             link: "http://asd.courses.sutd.edu.sg/dti-teams/sc02-group-7-project-part-4redo/",
-            image: "/LITTREELYLinkIMG.png",
+            image: "/LIT-TREE-LYLinkIMG.png",
             text: "Project Website",
           },
         ],

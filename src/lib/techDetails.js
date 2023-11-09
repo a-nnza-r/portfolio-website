@@ -1,9 +1,9 @@
 const techDetails = {
-  java: {
+  Java: {
     name: "java",
     color: "#f89820",
   },
-  andriod: {
+  Andriod: {
     name: "andriod",
     color: "#3DDC84",
   },
@@ -35,13 +35,17 @@ const techDetails = {
     name: "Typescript",
     color: "#007acc",
   },
-  Node: {
-    name: "Node",
+  "Node.js": {
+    name: "Node.js",
     color: "#007acc",
   },
-  firebase: {
+  Firebase: {
     name: "Firebase",
     color: "#FFA611",
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    color: "#008bb9",
   },
 };
 

@@ -1,4 +1,3 @@
-// Sample data: List of skill objects
 const skillsData = [
   {
     image: "/reactlogo.png",
@@ -26,7 +25,7 @@ const skillsData = [
     image: "/pandas_mark.svg",
     skillName: "Pandas",
     projects: [
-      { name: "GFSI", url: "projects/GFSI" },
+      { name: "Global Food Security Index (GFSI)", url: "projects/GFSI" },
       {
         name: "Sentiment Analysis ML Project",
         url: "projects/mlSentimentAnalysis",
@@ -35,9 +34,9 @@ const skillsData = [
   },
   {
     image: "/numpy.svg",
-    skillName: "Numpy",
+    skillName: "NumPy",
     projects: [
-      { name: "GFSI", url: "projects/GFSI" },
+      { name: "Global Food Security Index (GFSI)", url: "projects/GFSI" },
       {
         name: "Sentiment Analysis ML Project",
         url: "projects/mlSentimentAnalysis",
@@ -48,7 +47,7 @@ const skillsData = [
     image: "/tensorflow-icon.svg",
     skillName: "TensorFlow",
     projects: [],
-    elaboration: "Relevant courses: ",
+    elaboration: "Relevant courses:",
     certification: [
       {
         name: "Deep Learning",

@@ -5,14 +5,14 @@ const courseDetails = {
       "Mathematics, Statistics, Python, Advanced Statistics in Python, Machine & Deep Learning",
     TitleImg: {
       src: "/eduback.jpeg",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       courseDescription: {
         title: "Course Description",
         displayComponent: "CustomList",
         data: [
-          "Data science skills: Statistical analysis, Python programming with NumPy, pandas, matplotlib, and Seaborn, Advanced statistical analysis, Tableau, Machine Learning with stats models and scikit-learn, Deep learning with TensorFlow",
+          "This course covers data science skills, including statistical analysis, Python programming with NumPy, pandas, matplotlib, and Seaborn, advanced statistical analysis, Tableau, machine learning with stats models and scikit-learn, and deep learning with TensorFlow.",
         ],
       },
       courseLinks: {
@@ -32,9 +32,9 @@ const courseDetails = {
         ],
       },
       courseTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Python", "Numpy", "Pandas"],
+        data: ["Python", "NumPy", "Pandas"],
       },
     },
   },
@@ -44,14 +44,14 @@ const courseDetails = {
       "Learn to create Deep Learning Algorithms in Python from two Machine Learning & Data Science experts.",
     TitleImg: {
       src: "/eduback.jpeg",
-      alt: "images description",
+      alt: "Image description",
     },
     sections: {
       courseDescription: {
         title: "Course Description",
         displayComponent: "CustomList",
         data: [
-          "Deep Learning A-Z™ is structured around special coding blueprint approaches meaning that you won't get bogged down in unnecessary programming or mathematical complexities and instead you will be applying Deep Learning techniques from very early on in the course. You will build your knowledge from the ground up and you will see how with every tutorial you are getting more and more confident.",
+          "Deep Learning A-Z™ is structured around special coding blueprint approaches, meaning that you won't get bogged down in unnecessary programming or mathematical complexities. Instead, you will be applying deep learning techniques from very early on in the course. You will build your knowledge from the ground up, and with every tutorial, you will become more and more confident.",
         ],
       },
       courseLinks: {
@@ -71,9 +71,9 @@ const courseDetails = {
         ],
       },
       courseTechnologies: {
-        title: "Technologies used",
+        title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Python", "Numpy", "Pandas"],
+        data: ["Python", "NumPy", "Pandas"],
       },
     },
   },
