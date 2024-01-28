@@ -9,7 +9,21 @@ import {
   TimelineDot,
   TimelineOppositeContent,
 } from "@mui/lab";
+
+import { Container, Box, IconButton } from "@mui/material";
 import Typography from "@mui/material/Typography";
+
+const styles = {
+  container: {
+    backgroundColor: "#040424", // Deep blue color
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  iconButton: {
+    margin: "0 5px",
+  },
+};
 
 export default function CustomTimeline(props) {
   return (
@@ -48,6 +62,39 @@ export default function CustomTimeline(props) {
               >
                 {details.description}
               </Typography>
+            )}
+            {details.link && (
+              <Container sx={{ display: "flex" }}>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  width="30%"
+                  display="flex"
+                  alignItems="center"
+                >
+                  Company Links:
+                </Typography>
+                <Box
+                  sx={{ display: "flex", width: "70%", alignItems: "center" }}
+                >
+                  {details.link.map((social) => (
+                    <IconButton
+                      key={social.name}
+                      style={styles.iconButton}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={social.icon}
+                        alt={social.name}
+                        width={24}
+                        height={24}
+                      />
+                    </IconButton>
+                  ))}
+                </Box>
+              </Container>
             )}
             {details.details && (
               <ul>

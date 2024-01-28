@@ -25,12 +25,12 @@ export default function Header() {
           component={Link}
           href="/education"
         />
-        {/* <Tab
+        <Tab
           value="/experience"
           label="EXPERIENCE"
           component={Link}
           href="/experience"
-        /> */}
+        />
         <Tab value="/skills" label="SKILLS" component={Link} href="/skills" />
         <Tab
           value="/projects"

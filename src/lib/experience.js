@@ -1,5 +1,29 @@
 const experienceData = [
   {
+    year: "June 2023 – Present",
+    position: "Co-Founder & Lead AI Engineer",
+    company: "UImagine.io",
+    link: [
+      {
+        name: "LandingPage",
+        icon: "/webIcon.svg",
+        link: "https://uimagine.io/",
+      },
+      {
+        name: "LinkedIn",
+        icon: "/black-linkedin-logo-15915.svg",
+        link: "https://www.linkedin.com/company/uimagineio/",
+      },
+    ],
+    details: [
+      "Spearheaded the development of a generative design tool aimed at simplifying web page creation through natural language prompts, enhancing user experience with an intuitive interface for design and component modification.",
+      "Led a dynamic team of three, focusing on the training and development of AI models to power the core functionalities of our MVP, ensuring the seamless translation of user inputs into sophisticated web designs.",
+      "Pioneered the conceptualization of model architectures, meticulously preparing and curating datasets for both initial training and subsequent fine-tuning of existing models to meet specific user needs and industry standards.",
+      "Played a pivotal role in product ideation and workflow development, aligning technological capabilities with market demands to create a user-centric tool that addresses the challenges of web design.",
+      "Conducted extensive interviews with potential clients to gather critical feedback, integrating insights into the product development process to refine and enhance the tool's features and usability.",
+    ],
+  },
+  {
     year: "Feb 2021 – Aug 2021",
     position: "Safe Distancing Ambassador",
     company: "Sentosa",

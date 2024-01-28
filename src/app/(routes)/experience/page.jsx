@@ -7,14 +7,7 @@ import experienceData from "@/lib/experience.js";
 export default function Page() {
   return (
     <div>
-      <Stack sx={{ width: "100%" }} spacing={2}>
-        <Link style={{ textDecoration: "none" }} href={"projects"} passHref>
-          <Alert severity="info">
-            Current work experiences are non-techinical roles, click here to
-            checkout the projects page for techinical experience
-          </Alert>
-        </Link>
-      </Stack>
+      <Stack sx={{ width: "100%" }} spacing={2}></Stack>
 
       <div
         style={{

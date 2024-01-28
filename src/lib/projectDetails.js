@@ -11,7 +11,7 @@ const projectDetails2 = {
         title: "Project Overview",
         displayComponent: "CustomTypography",
         data: {
-          text: "This group project was developed under the Machine Learning (50.007) module at SUTD. The project focuses on creating automated systems for analyzing sentiment information associated with social media data.",
+          text: "This group project was developed under the Machine Learning (50.007) module at SUTD. The project focuses on creating automated systems for analysing sentiment information associated with social media data.",
         },
       },
       projectDescription: {
@@ -194,7 +194,7 @@ const projectDetails2 = {
           "Android Application built using Java.",
           "Incorporated various features such as a login page, proximity-based browsing, and listing functionality.",
           "Incorporated filtered browsing for a user-centric experience.",
-          "Chatrooms for group buyers to communicate about their order details.",
+          "Chat Rooms for group buyers to communicate about their order details.",
         ],
       },
       projectContribution: {
@@ -202,8 +202,8 @@ const projectDetails2 = {
         displayComponent: "CustomList",
         data: [
           "Developed responsive Android UI to simplify group food orders by integrating Google Firebase and Java.",
-          "Utilized Android Developer API to retrieve device location and identify close-proximity group food orders.",
-          "Led the system design process, including selecting the appropriate tech stack, defining key data models, and determining data flow architecture to optimize app performance and user experience.",
+          "Utilised Android Developer API to retrieve device location and identify close-proximity group food orders.",
+          "Led the system design process, including selecting the appropriate tech stack, defining key data models, and determining data flow architecture to optimise app performance and user experience.",
         ],
       },
       projectAchievements: {
@@ -262,7 +262,7 @@ const projectDetails2 = {
         displayComponent: "CustomList",
         data: [
           "Data preprocessing, such as removing outliers, data transformation, and scaling.",
-          "Implemented a Regression model from scratch (without the use of ML packages such as scikit-learn).",
+          "Implemented a Regression model from scratch (without the use of ML packages such as Scikit-learn).",
           "Trained and validated the model, performed fine-tuning to improve model robustness.",
           "Tested model results.",
         ],
