@@ -16,17 +16,23 @@ import Typography from "@mui/material/Typography";
 
 export default function CustomTimeline(props) {
   const [isSmallerThanMedium, setIsSmallerThanMedium] = useState(
-    window.innerWidth < 1024 // Initial check
+    typeof window !== "undefined" && window.innerWidth < 1024 // Initial check
   );
 
   useEffect(() => {
     function updateScreenSize() {
-      setIsSmallerThanMedium(window.innerWidth < 1024);
+      setIsSmallerThanMedium(
+        typeof window !== "undefined" && window.innerWidth < 1024
+      );
     }
-    window.addEventListener("resize", updateScreenSize);
-    return () => {
-      window.removeEventListener("resize", updateScreenSize);
-    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", updateScreenSize);
+
+      return () => {
+        window.removeEventListener("resize", updateScreenSize);
+      };
+    }
   }, []);
 
   return (
