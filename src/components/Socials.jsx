@@ -16,7 +16,7 @@ const socialsData = [
 
 function Socials() {
   return (
-    <Container className="flex justify-center items-center py-2 bg-deep-blue w-full max-w-none">
+    <Container className="max-w-none w-full flex justify-center items-center py-2 bg-deep-blue">
       {" "}
       {/* Applied background color */}
       {socialsData.map((social) => (
