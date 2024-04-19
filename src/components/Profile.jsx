@@ -38,7 +38,7 @@ function Profile() {
         </div>
       </div>
 
-      <div className="w-full bg-gray-100 flex flex-col md:flex-row">
+      <div className="bg-deep-blue flex flex-col md:flex-row w-full ">
         <Socials />
       </div>
     </div>

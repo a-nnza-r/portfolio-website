@@ -16,9 +16,7 @@ const socialsData = [
 
 function Socials() {
   return (
-    <Container className="w-full flex justify-center items-center py-2 bg-deep-blue">
-      {" "}
-      {/* Applied background color */}
+    <Container className="bg-deep-blue w-full flex justify-center items-center py-2">
       {socialsData.map((social) => (
         <IconButton
           key={social.name}
@@ -27,8 +25,8 @@ function Socials() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={social.icon} alt={social.name} className="w-6 h-6" />{" "}
-          {/* Tailwind classes for width and height */}
+          <img src={social.icon} alt={social.name} className="w-6 h-6" />
+          {/* Icons are 6x6 in size with margin 1 and will change background color on hover */}
         </IconButton>
       ))}
     </Container>
