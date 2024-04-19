@@ -37,23 +37,12 @@ export default function Header() {
   };
 
   return (
-    <div
-      style={{
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-        display: "flex",
-        justifyContent: "space-around",
-        padding: "10px",
-        background: "gray",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-      }}
-    >
-      {/* Conditionally render ScrollLink or a regular anchor tag based on current path */}
+    <div className="sticky top-0 z-50 w-full flex justify-around bg-gray-800 text-white py-3 shadow-md">
       {pathname === "/" ? (
         <>
           <ScrollLink
-            activeClass="active"
+            className="text-lg font-semibold hover:text-blue-400 cursor-pointer"
+            activeClass="text-blue-500"
             to="about-me"
             spy={true}
             smooth={true}
@@ -63,7 +52,8 @@ export default function Header() {
             Ansar Ahmed
           </ScrollLink>
           <ScrollLink
-            activeClass="active"
+            className="text-lg font-semibold hover:text-green-400 cursor-pointer"
+            activeClass="text-green-500"
             to="work-experience"
             spy={true}
             smooth={true}
@@ -73,7 +63,8 @@ export default function Header() {
             Work Experience
           </ScrollLink>
           <ScrollLink
-            activeClass="active"
+            className="text-lg font-semibold hover:text-red-400 cursor-pointer"
+            activeClass="text-red-500"
             to="projects"
             spy={true}
             smooth={true}
@@ -83,7 +74,8 @@ export default function Header() {
             Projects
           </ScrollLink>
           <ScrollLink
-            activeClass="active"
+            className="text-lg font-semibold hover:text-yellow-400 cursor-pointer"
+            activeClass="text-yellow-500"
             to="education"
             spy={true}
             smooth={true}
@@ -95,12 +87,30 @@ export default function Header() {
         </>
       ) : (
         <>
-          <a onClick={() => handleNavigate("about-me")}>Ansar Ahmed</a>
-          <a onClick={() => handleNavigate("work-experience")}>
+          <a
+            className="text-lg font-semibold hover:text-blue-400 cursor-pointer"
+            onClick={() => handleNavigate("about-me")}
+          >
+            Ansar Ahmed
+          </a>
+          <a
+            className="text-lg font-semibold hover:text-green-400 cursor-pointer"
+            onClick={() => handleNavigate("work-experience")}
+          >
             Work Experience
           </a>
-          <a onClick={() => handleNavigate("projects")}>Projects</a>
-          <a onClick={() => handleNavigate("education")}>Education</a>
+          <a
+            className="text-lg font-semibold hover:text-red-400 cursor-pointer"
+            onClick={() => handleNavigate("projects")}
+          >
+            Projects
+          </a>
+          <a
+            className="text-lg font-semibold hover:text-yellow-400 cursor-pointer"
+            onClick={() => handleNavigate("education")}
+          >
+            Education
+          </a>
         </>
       )}
     </div>

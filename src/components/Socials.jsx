@@ -1,4 +1,5 @@
-import { Container, IconButton } from "@mui/material";
+import React from "react";
+import { IconButton, Container } from "@mui/material";
 
 const socialsData = [
   {
@@ -13,30 +14,21 @@ const socialsData = [
   },
 ];
 
-const styles = {
-  container: {
-    backgroundColor: "#040424", // Deep blue color
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  iconButton: {
-    margin: "0 5px",
-  },
-};
-
 function Socials() {
   return (
-    <Container style={styles.container}>
+    <Container className="flex justify-center items-center py-2 bg-deep-blue w-full max-w-none">
+      {" "}
+      {/* Applied background color */}
       {socialsData.map((social) => (
         <IconButton
           key={social.name}
-          style={styles.iconButton}
+          className="m-1 hover:bg-vibrant-blue rounded-full"
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={social.icon} alt={social.name} width={24} height={24} />
+          <img src={social.icon} alt={social.name} className="w-6 h-6" />{" "}
+          {/* Tailwind classes for width and height */}
         </IconButton>
       ))}
     </Container>

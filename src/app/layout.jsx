@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
-
+import "../styles/globals.css";
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 

@@ -1,4 +1,47 @@
 const projectDetails2 = {
+  dlPRoj: {
+    name: "dlPRoj",
+    title: "Dementia Diagnosis via MRI images",
+    TitleImg: {
+      src: "/mri.jpeg",
+      alt: "Image description",
+    },
+    sections: {
+      projectOverview: {
+        title: "Project Overview",
+        displayComponent: "CustomTypography",
+        data: {
+          text: "This group project was developed under the Deep Learning module at SUTD. Project required applying Deep Learning techniques for creating models for Medical application.",
+        },
+      },
+      projectContribution: {
+        title: "Project Contribution",
+        displayComponent: "CustomList",
+        data: [
+          "Engineered three machine learning models—modified ResNet architecture, CNN, and CRNN—to classify dementia stages from MRI scans with high precision (ResNet: 99.77%, CNN: 98.86%, CRNN: 98.36%).",
+          "Leveraged adversarial training, data normalization, and targeted augmentation to bolster CNN's performance against variability, while adapting a tailored ResNet architecture to serve as a performance benchmarking for other models built.",
+          "Managed models with different parameter scales, balancing computational efficiency with predictive performance, considering deployment on constrained medical devices.",
+          "Assessed model efficacy with F1 score and confusion matrix analysis to understand classification performance and limitations in a multi-class setup, aligning with standards for medical diagnostics deployment.",
+        ],
+      },
+      projectLinks: {
+        title: "Project Links",
+        displayComponent: "LinksContainer",
+        data: [
+          {
+            link: "https://github.com/a-nnza-r/MCC-Dementia.git",
+            image: "/ML-proj.png",
+            text: "GitHub Repository",
+          },
+        ],
+      },
+      projectTechnologies: {
+        title: "Technologies Used",
+        displayComponent: "TechIconContainer",
+        data: ["Python", "NumPy", "Pandas"],
+      },
+    },
+  },
   mlSentimentAnalysis: {
     name: "mlSentimentAnalysis",
     title: "Sentiment Analysis Machine Learning Project",

@@ -15,7 +15,7 @@ export default function Page() {
   const router = useRouter();
 
   return (
-    <div style={{ borderRadius: "10px", padding: "20px" }}>
+    <div>
       {/* About Me section with ID for scrolling */}
       <div id="about-me">
         <Profile />
@@ -23,45 +23,25 @@ export default function Page() {
       </div>
 
       {/* Work Experience section */}
-      <div id="work-experience">
+      <div
+        id="work-experience"
+        className="bg-light-bg text-deep-blue p-5 gap-0 m-5 rounded-lg overflow-hidden shadow-lg"
+      >
+        <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+          Work Experience
+        </h2>
         <CustomTimeline data={experienceData} />
       </div>
 
-      {/* projects section */}
+      {/* Projects section */}
       <div
         id="projects"
-        style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
-        }}
+        className="p-5 gap-0 m-5 flex flex-col items-center py-10 bg-gray-100 "
       >
-        <div
-          style={{
-            content: "",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundImage: "url(/backgroundimg2.png)",
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            opacity: 0.15, // Adjust this value to control the transparency level
-            zIndex: -1,
-          }}
-        />
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between", // Updated this line
-            margin: "5vh 10vw 5vh 10vw",
-          }}
-        >
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+          Projects
+        </h2>
+        <div className="flex flex-wrap justify-center gap-4 px-5 md:px-10">
           {Object.values(projectDetails).map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -69,7 +49,13 @@ export default function Page() {
       </div>
 
       {/* Education section */}
-      <div id="education">
+      <div
+        id="education"
+        className="bg-light-bg text-deep-blue p-5 gap-0 m-5 rounded-lg overflow-hidden shadow-lg"
+      >
+        <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
+          Education
+        </h2>
         <CustomTimeline data={educationData} />
       </div>
     </div>
