@@ -25,7 +25,7 @@ export default function Page() {
       {/* Work Experience section */}
       <div
         id="work-experience"
-        className="bg-light-bg text-deep-blue p-5 gap-0 m-5 rounded-lg overflow-hidden shadow-lg"
+        className="bg-light-bg text-deep-blue p-5 gap-0 m-5 items-center rounded-lg overflow-hidden shadow-lg"
       >
         <h2 className="text-xl md:text-2xl font-bold text-center mb-4">
           Work Experience
