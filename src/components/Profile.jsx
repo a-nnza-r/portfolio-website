@@ -4,7 +4,7 @@ import Socials from "@/components/Socials.jsx";
 
 function Profile() {
   return (
-    <div className="flex flex-col gap-0 m-5 rounded-lg overflow-hidden shadow-lg">
+    <div className="flex flex-col gap-0 m-5 rounded-lg overflow-hidden shadow-lg justify-center">
       <div className="bg-gray-100 flex flex-col md:flex-row w-full">
         <img
           src="me.png"
