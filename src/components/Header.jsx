@@ -1,105 +1,108 @@
 "use client";
-
-import { useState } from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import Link from "next/link";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
+import React, { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const router = useRouter();
+  const pathname = usePathname();
 
-  function handleDrawerToggle() {
-    setMobileOpen(!mobileOpen);
-  }
+  useEffect(() => {
+    if (activeSection && pathname === "/") {
+      setTimeout(() => {
+        scroller.scrollTo(activeSection, {
+          duration: 500,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -70,
+        });
+        setActiveSection("");
+      }, 100);
+    }
+  }, [pathname, activeSection]);
 
-  function DrawerContent(props) {
-    return (
-      <Box sx={{ display: "flex", flexDirection: props.flexDirection }}>
-        <Tab
-          value="/education"
-          label="EDUCATION"
-          component={Link}
-          href="/education"
-        />
-        <Tab
-          value="/experience"
-          label="EXPERIENCE"
-          component={Link}
-          href="/experience"
-        />
-        <Tab value="/skills" label="SKILLS" component={Link} href="/skills" />
-        <Tab
-          value="/projects"
-          label="PROJECTS"
-          component={Link}
-          href="/projects"
-        />
-      </Box>
-    );
-  }
+  const handleNavigate = (section) => {
+    if (pathname !== "/") {
+      setActiveSection(section);
+      router.push("/");
+    } else {
+      scroller.scrollTo(section, {
+        duration: 500,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -70,
+      });
+    }
+  };
 
   return (
-    <Tabs
-      sx={{
-        bgcolor: "#f6f6f6",
-        width: "100%",
+    <div
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
         display: "flex",
-        alignItems: "center",
+        justifyContent: "space-around",
+        padding: "10px",
+        background: "gray",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
       }}
     >
-      <Tab
-        value="/"
-        label="Ansar Ahmed"
-        component={Link}
-        href="/"
-        sx={{
-          flexGrow: 0,
-          flexShrink: 1,
-          color: "#040424",
-          fontWeight: "bold",
-          fontSize: "25px",
-          fontFamily: "Copperplate",
-        }}
-      />
-
-      {/* For larger screens */}
-      <Box
-        sx={{
-          flexGrow: 1,
-          display: { xs: "none", sm: "none", md: "flex" },
-          justifyContent: "flex-end",
-        }}
-      >
-        <DrawerContent flexDirection={"row"} />
-      </Box>
-
-      {/* For smaller screens */}
-      <Box
-        sx={{
-          flexGrow: 1,
-          display: { xs: "flex", sm: "flex", md: "none" },
-          justifyContent: "flex-end",
-          margin: "5px",
-        }}
-      >
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          edge="end"
-          onClick={handleDrawerToggle}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Box>
-
-      {/* Drawer for mobile view */}
-      <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
-        <DrawerContent flexDirection={"column"} />
-      </Drawer>
-    </Tabs>
+      {/* Conditionally render ScrollLink or a regular anchor tag based on current path */}
+      {pathname === "/" ? (
+        <>
+          <ScrollLink
+            activeClass="active"
+            to="about-me"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Ansar Ahmed
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="work-experience"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Work Experience
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Projects
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="education"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Education
+          </ScrollLink>
+        </>
+      ) : (
+        <>
+          <a onClick={() => handleNavigate("about-me")}>Ansar Ahmed</a>
+          <a onClick={() => handleNavigate("work-experience")}>
+            Work Experience
+          </a>
+          <a onClick={() => handleNavigate("projects")}>Projects</a>
+          <a onClick={() => handleNavigate("education")}>Education</a>
+        </>
+      )}
+    </div>
   );
 }
