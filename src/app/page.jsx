@@ -39,7 +39,7 @@ export default function Page() {
       {/* Projects section */}
       <div
         id="projects"
-        className="p-5 gap-0 m-5 flex flex-col items-center py-10 bg-gray-100 "
+        className="rounded-lg shadow-lg p-5 gap-0 m-5 flex flex-col items-center py-10 bg-gray-100 "
       >
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
           Projects

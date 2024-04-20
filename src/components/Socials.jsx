@@ -1,5 +1,4 @@
 import React from "react";
-import { IconButton } from "@mui/material";
 
 const socialsData = [
   {
@@ -18,16 +17,16 @@ function Socials() {
   return (
     <div className="bg-deep-blue w-full m-0 flex justify-center items-center">
       {socialsData.map((social) => (
-        <IconButton
+        <a
           key={social.name}
-          className="m-1 hover:bg-vibrant-blue rounded-full"
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
+          className="inline-block m-1 hover:bg-vibrant-blue rounded-full p-2"
         >
           <img src={social.icon} alt={social.name} className="w-6 h-6" />
-          {/* Icons are 6x6 in size with margin 1 and will change background color on hover */}
-        </IconButton>
+          {/* Image icon is 6x6 in size with margin 1, padding 2, and will change background color on hover */}
+        </a>
       ))}
     </div>
   );
