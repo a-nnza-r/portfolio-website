@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Container } from "@mui/material";
+import { IconButton } from "@mui/material";
 
 const socialsData = [
   {
@@ -16,7 +16,7 @@ const socialsData = [
 
 function Socials() {
   return (
-    <Container className="bg-deep-blue w-full flex justify-center items-center py-2">
+    <div className="bg-deep-blue w-full m-0 flex justify-center items-center">
       {socialsData.map((social) => (
         <IconButton
           key={social.name}
@@ -29,7 +29,7 @@ function Socials() {
           {/* Icons are 6x6 in size with margin 1 and will change background color on hover */}
         </IconButton>
       ))}
-    </Container>
+    </div>
   );
 }
 

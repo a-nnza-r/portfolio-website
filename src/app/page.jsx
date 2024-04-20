@@ -17,7 +17,10 @@ export default function Page() {
   return (
     <div>
       {/* About Me section with ID for scrolling */}
-      <div id="about-me">
+      <div
+        id="about-me"
+        className="bg-light-bg text-deep-blue gap-0 m-5 b-0 p-0 items-center rounded-lg overflow-hidden shadow-lg"
+      >
         <Profile />
         <PersonalWriteUp />
       </div>

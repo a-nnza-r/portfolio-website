@@ -3,8 +3,8 @@ import information from "@/lib/details.js";
 
 function PersonalWriteUp() {
   return (
-    <div className="flex flex-col items-center m-5 rounded-lg overflow-hidden shadow-lg">
-      <div className="w-full bg-gray-100 flex flex-col items-center rounded-lg overflow-hidden shadow-lg p-3 sm:p-1">
+    <div className="flex flex-col items-center overflow-hidden">
+      <div className="w-full bg-gray-100 flex flex-col items-center overflow-hidden p-3 sm:p-1">
         <h1 className="text-3xl md:text-2xl sm:text-xl text-center text-gray-800 mb-1">
           Hello! I'm {information.name}
         </h1>
