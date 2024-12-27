@@ -4,7 +4,6 @@ const educationData = [
     degree: "Bachelor's Degree",
     school: "Singapore University of Technology and Design (SUTD)",
     description: "Bachelor of Engineering (Computer Science), Honours",
-    details: ["Focus Track: Data Analytics", "Minor: Artificial Intelligence"],
   },
   {
     year: "2017-2018",
