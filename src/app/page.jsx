@@ -8,7 +8,7 @@ import experienceData from "@/lib/experience.js";
 import educationData from "@/lib/education.js";
 import projectDetails from "@/lib/projectDetails";
 import CustomTimeline from "@/components/CustomTimeline.jsx";
-import DeveloperProfile from "@/components/profile.jsx";
+import Profile from "@/components/profile";
 
 export default function Page() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Page() {
     <div className="max-w-5xl mx-auto">
       {/* About Me section with ID for scrolling */}
       <div id="about-me">
-        <DeveloperProfile/>
+        <Profile/>
       </div>
 
       {/* Work Experience section */}
