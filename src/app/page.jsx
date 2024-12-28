@@ -8,7 +8,7 @@ import experienceData from "@/lib/experience.js";
 import educationData from "@/lib/education.js";
 import projectDetails from "@/lib/projectDetails";
 import CustomTimeline from "@/components/CustomTimeline.jsx";
-import Profile from "@/components/profile";
+import Profile from "@/components/Profile";
 
 export default function Page() {
   const router = useRouter();
