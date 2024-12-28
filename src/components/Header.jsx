@@ -3,7 +3,7 @@ import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconUser, IconBriefcase, IconFolder, IconSchool } from "@tabler/icons-react";
 
-export default function Header() {
+export default function Header({activeSection, setActiveSection}) {
   const navItems = [
     {
       name: "About Me",
@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <div className="relative w-full">
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} activeSection={activeSection} setActiveSection={setActiveSection} />
     </div>
   );
 }

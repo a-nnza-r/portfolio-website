@@ -22,14 +22,50 @@ export function ProjectCard(props) {
       </CardDescription>
       { project.sections.projectTechnologies && project.sections.projectTechnologies.data && (
         <CardSkeletonContainer>
-          <Skeleton technologies={project.sections.projectTechnologies.data}/>
+          <Skeleton dataList={project.sections.projectTechnologies.data}/>
         </CardSkeletonContainer>)
       }
     </Card>)
   );
 }
 
-export const Skeleton = ({ technologies }) => {
+export const TechIconContainer = ({ dataList }) => {
+  const scale = [1, 1.1, 1];
+  const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
+  const sequence = [
+    [
+      ".circle-3",
+      {
+        scale,
+        transform,
+      },
+      { duration: 0.8 },
+    ]
+  ];
+ 
+  useEffect(() => {
+    animate(sequence, {
+      // @ts-ignore
+      repeat: Infinity,
+      repeatDelay: 1,
+    });
+  }, []);
+
+  return (
+      <div className="flex flex-row items-center flex-shrink-0 gap-2 mb-6">
+        {dataList.map((data, i) => (
+          data && (
+          <Container key={i} className={"h-12 w-12 circle-3"}>
+            <Logo technology={data} className="w-8 h-8" />
+          </Container>
+        )
+        ))}
+      </div>
+  );
+};
+
+
+export const Skeleton = ({ dataList }) => {
   const containerDims = ["h-8 w-8", "h-12 w-12", "", "h-12 w-12", "h-8 w-8"];
   const dims = ["h-4 w-4", "h-6 w-6", "h-8 w-8", "h-6 w-6", "h-4 w-4"];
   const scale = [1, 1.1, 1];
@@ -88,7 +124,7 @@ export const Skeleton = ({ technologies }) => {
   return (
     <div className="relative flex items-center justify-center h-full p-4 overflow-hidden">
       <div className="flex flex-row items-center justify-center flex-shrink-0 gap-2">
-        {technologies.map((data, i) => (
+        {dataList.map((data, i) => (
           data && (
           <Container key={i} className={`${containerDims[i]} circle-${i + 1}`}>
             <Logo technology={data} className={`${dims[i]}`} />

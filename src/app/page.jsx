@@ -34,7 +34,7 @@ export default function Page() {
         </h2>
         <div className="grid flex-wrap items-center justify-center gap-4 md:grid-cols-2">
           {Object.values(projectDetails).map((project, index) => (
-            <ProjectCard key={index} project={project}/>
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>

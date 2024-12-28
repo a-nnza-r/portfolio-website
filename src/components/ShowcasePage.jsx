@@ -16,16 +16,16 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 import BulletList from "@/components/CustomOrderedList.jsx";
-import TechIconContainer from "@/components/TechIcon.jsx";
 import ImageComponent from "@/components/ImageComponent.jsx";
 import CustomTypography from "@/components/CustomTypography.jsx";
 import LinksContainer from "@/components/LinksContainer.jsx";
+import { TechIconContainer } from "@/components/ui/ProjectCard.jsx";
 
 const components = {
-  TechIconContainer: TechIconContainer,
   CustomTypography: CustomTypography,
   CustomList: BulletList,
   LinksContainer: LinksContainer,
+  TechIconContainer: TechIconContainer,
 };
 
 export default function ShowcasePage(props) {
@@ -68,7 +68,7 @@ export default function ShowcasePage(props) {
           {Object.entries(props.data.sections).map(([key, section], index) => (
             <Box mt={4} key={index} id={key}>
               {section.key !== "TitleImg" && (
-                <Typography variant="h4">{section.title}</Typography>
+                <Typography variant="h4" className="pb-2">{section.title}</Typography>
               )}
               {components[section.displayComponent] ? (
                 React.createElement(components[section.displayComponent], {
