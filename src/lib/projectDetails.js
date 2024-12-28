@@ -1,9 +1,9 @@
 const projectDetails2 = {
-  tunadb: {
+  TunaDB: {
     name: "TunaDB",
-    title: "High Write throughput distributed DB",
+    title: "TunaDB - Distributed Database",
     TitleImg: {
-      src: "/tunadb.png",
+      src: "/tunadbcover.png",
       alt: "Image description",
     },
     sections: {
@@ -18,6 +18,9 @@ const projectDetails2 = {
         title: "Project Contribution",
         displayComponent: "CustomList",
         data: [
+          "Implemented gossip protocol that efficiently and rapidly disseminates information about node statuses across the network under 100ms.",
+          "Implemented a robust fault tolerant system that can perform data replication and redistribution ensuring data can be preserved and accessed even in the event of up to r-1 concurrent failures (r: replication factor) and up to n-1 node failures (n: total number of nodes).",
+          "Implemented a distribution handler that utilizes the consistent hashing ring with Go to redistribute up to 1k+ records across a 4-node cluster within seconds, maintaining data consistency during node transitions.",
         ],
       },
       projectLinks: {

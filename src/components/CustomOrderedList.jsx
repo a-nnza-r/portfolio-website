@@ -6,8 +6,8 @@ export default function BulletList(props) {
   return (
     <List>
       {props.dataList.map((item, index) => (
-        <ListItem key={index}>
-          <ListItemText primary={item} />
+        <ListItem key={index} className="p-0">
+          <ListItemText primary={item} className="p-0" />
         </ListItem>
       ))}
     </List>
