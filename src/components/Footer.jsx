@@ -1,27 +1,19 @@
 import information from "@/lib/details.js";
 import Socials from "./Socials";
 import styles from "@/styles/Footer.module.css";
+import React from "react";
+import {
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+} from "@tabler/icons-react";
+
 
 export default function Footer() {
   return (
-    <div className={styles.container}>
-      <div className={styles.profileTextContainer}>
-        <div>
-          <div className={styles.profileTitle}>{information.name}</div>
-          <div className={styles.profileSubtitle}>{information.occupation}</div>
-        </div>
-
-        <div className={styles.profileDetail}>
-          <div className={styles.profileDetailTitle}>Student Email: </div>
-          {information.studentEmail}
-        </div>
-
-        <div className={styles.profileDetail}>
-          <div className={styles.profileDetailTitle}>Email: </div>
-          {information.email}
-        </div>
-      </div>
       <Socials />
-    </div>
   );
 }

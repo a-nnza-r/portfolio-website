@@ -16,16 +16,16 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 import BulletList from "@/components/CustomOrderedList.jsx";
-import TechIconContainer from "@/components/TechIcon.jsx";
 import ImageComponent from "@/components/ImageComponent.jsx";
 import CustomTypography from "@/components/CustomTypography.jsx";
 import LinksContainer from "@/components/LinksContainer.jsx";
+import { TechIconContainer } from "@/components/ui/ProjectCard.jsx";
 
 const components = {
-  TechIconContainer: TechIconContainer,
   CustomTypography: CustomTypography,
   CustomList: BulletList,
   LinksContainer: LinksContainer,
+  TechIconContainer: TechIconContainer,
 };
 
 export default function ShowcasePage(props) {
@@ -33,23 +33,9 @@ export default function ShowcasePage(props) {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div
-      style={{
-        width: "95%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        margin: "1% 2.5% 1% 2.5%",
-      }}
-    >
+    <div className="flex flex-col items-center m-5">
       <div
-        style={{
-          width: "92%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "0 4% 0 4%",
-        }}
+        className="flex flex-col items-center w-3/4 mb-4"
       >
         <ImageComponent
           src={props.data.TitleImg.src}
@@ -66,9 +52,9 @@ export default function ShowcasePage(props) {
         {/* Main Content */}
         <Grid item xs={12} sm={9}>
           {Object.entries(props.data.sections).map(([key, section], index) => (
-            <Box mt={4} key={index} id={key}>
+            <Box key={index} id={key} mb={3}>
               {section.key !== "TitleImg" && (
-                <Typography variant="h4">{section.title}</Typography>
+                <Typography variant="h4" className="pb-2">{section.title}</Typography>
               )}
               {components[section.displayComponent] ? (
                 React.createElement(components[section.displayComponent], {

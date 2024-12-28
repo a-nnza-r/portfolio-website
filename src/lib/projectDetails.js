@@ -1,4 +1,46 @@
 const projectDetails2 = {
+  TunaDB: {
+    name: "TunaDB",
+    title: "TunaDB - Distributed Database",
+    TitleImg: {
+      src: "/tunadbcover.png",
+      alt: "Image description",
+    },
+    sections: {
+      projectOverview: {
+        title: "Project Overview",
+        displayComponent: "CustomTypography",
+        data: {
+          text: "This group project was developed under the Distributed Systems & Computing module at SUTD. Project required applying protocols learned during the lessons to construct a fault tolerant distributed database.",
+        },
+      },
+      projectContribution: {
+        title: "Project Contribution",
+        displayComponent: "CustomList",
+        data: [
+          "Implemented gossip protocol that efficiently and rapidly disseminates information about node statuses across the network under 100ms.",
+          "Implemented a robust fault tolerant system that can perform data replication and redistribution ensuring data can be preserved and accessed even in the event of up to r-1 concurrent failures (r: replication factor) and up to n-1 node failures (n: total number of nodes).",
+          "Implemented a distribution handler that utilizes the consistent hashing ring with Go to redistribute up to 1k+ records across a 4-node cluster within seconds, maintaining data consistency during node transitions.",
+        ],
+      },
+      projectLinks: {
+        title: "Project Links",
+        displayComponent: "LinksContainer",
+        data: [
+          {
+            link: "https://github.com/uimagine-admin/tunadb.git",
+            image: "/tunadb.png",
+            text: "GitHub Repository",
+          },
+        ],
+      },
+      projectTechnologies: {
+        title: "Technologies Used",
+        displayComponent: "TechIconContainer",
+        data: ["PostMan", "Docker", "Go", "Python",],
+      },
+    },
+  },
   dlPRoj: {
     name: "dlPRoj",
     title: "Dementia Diagnosis via MRI images",
@@ -38,7 +80,7 @@ const projectDetails2 = {
       projectTechnologies: {
         title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Python", "NumPy", "Pandas"],
+        data: ["Pandas", "PyTorch", "Python", "NumPy", "Matplotlib"],
       },
     },
   },
@@ -89,7 +131,7 @@ const projectDetails2 = {
       projectTechnologies: {
         title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Python", "NumPy", "Pandas"],
+        data: ["Matplotlib", "NumPy", "Python", "Pandas", "Seaborn"],
       },
     },
   },
@@ -150,7 +192,7 @@ const projectDetails2 = {
       projectTechnologies: {
         title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["React.js", "Node.js", "PostgreSQL"],
+        data: ["React.js", "Node.js", "PostgreSQL", "Next.js", "Github"],
       },
     },
   },
@@ -211,7 +253,7 @@ const projectDetails2 = {
       projectTechnologies: {
         title: "Technologies Used",
         displayComponent: "TechIconContainer",
-        data: ["Next.js", "Typescript", "Firebase"],
+        data: ["Tailwindcss", "Firebase", "Next.js", "Typescript", "Github"],
       },
     },
   },
@@ -335,8 +377,6 @@ const projectDetails2 = {
           "Pandas",
           "Matplotlib",
           "Next.js",
-          "React.js",
-          "TypeScript",
         ],
       },
     },
