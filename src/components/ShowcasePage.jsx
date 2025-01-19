@@ -20,12 +20,16 @@ import ImageComponent from "@/components/ImageComponent.jsx";
 import CustomTypography from "@/components/CustomTypography.jsx";
 import LinksContainer from "@/components/LinksContainer.jsx";
 import { TechIconContainer } from "@/components/ui/ProjectCard.jsx";
+import PdfViewer from '@/components/pdf-viewer.jsx';
+import YoutubeEmbedding from "@/components/youtubeEmbedding.jsx";
 
 const components = {
   CustomTypography: CustomTypography,
   CustomList: BulletList,
   LinksContainer: LinksContainer,
   TechIconContainer: TechIconContainer,
+  PdfViewer: PdfViewer,
+  YoutubeEmbedding: YoutubeEmbedding,
 };
 
 export default function ShowcasePage(props) {
@@ -46,7 +50,7 @@ export default function ShowcasePage(props) {
         </Typography>
       </div>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} mb={5}>
         {<TableOfContents sections={props.data.sections} isMobile={isMobile} />}
 
         {/* Main Content */}
