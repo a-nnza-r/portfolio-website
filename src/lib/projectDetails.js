@@ -34,6 +34,13 @@ const projectDetails2 = {
           },
         ],
       },
+      projectSlides: {
+        title: "Project Slides",
+        displayComponent: "PdfViewer",
+        data: {
+          fileUrl: "https://www.canva.com/design/DAGZtre4t3E/mwe3OmWC5cElbLmhoBWqtw/view?embed",
+        },
+      },
       projectTechnologies: {
         title: "Technologies Used",
         displayComponent: "TechIconContainer",

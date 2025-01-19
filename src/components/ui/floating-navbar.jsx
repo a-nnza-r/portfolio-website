@@ -14,7 +14,9 @@ export const FloatingNav = ({ navItems, className, activeSection, setActiveSecti
     const path = typeof window !== "undefined" ? window.location.pathname : ""; // Ensure client-side execution
     if (path.includes("/projects")) {
       setActiveSection("#projects");
-    } else if (path === "/" && !activeSection) {
+    } else if (path.includes("/awards")) {
+      setActiveSection("#awards");
+    }else if (path === "/" && !activeSection) {
       setActiveSection(navItems[0].link); // Default to the first nav item on home
     }
   }, [navItems, setActiveSection]);

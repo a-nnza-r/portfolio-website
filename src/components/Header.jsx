@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconUser, IconBriefcase, IconFolder, IconSchool } from "@tabler/icons-react";
+import { IconUser, IconBriefcase, IconFolder, IconSchool, IconAward } from "@tabler/icons-react";
 
 export default function Header({activeSection, setActiveSection}) {
   const navItems = [
@@ -14,6 +14,11 @@ export default function Header({activeSection, setActiveSection}) {
       name: "Work Experience",
       link: "#work-experience",
       icon: <IconBriefcase className="w-5 h-5 sm:hidden" />,
+    },
+    {
+      name: "Awards",
+      link: "#awards",
+      icon: <IconAward className="w-5 h-5 sm:hidden" />,
     },
     {
       name: "Projects",
